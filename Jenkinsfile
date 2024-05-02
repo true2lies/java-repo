@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout
-            }
-        }
-
         stage('Build') {
             steps {
                 // Add your build steps here
