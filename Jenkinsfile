@@ -27,9 +27,11 @@ pipeline {
     post {
         always {
             // Send an email with the build results
-            emailext body: 'The pipeline has completed. Check the build logs for more details.',
-                     subject: 'Pipeline Completed',
-                     to: 'true2lies36@gmail.com'
+            emailext(
+                body: 'The pipeline has completed. Check the build logs for more details.',
+                subject: 'Pipeline Completed',
+                to: 'true2lies36@gmail.com'
+            )
         }
     }
 }
